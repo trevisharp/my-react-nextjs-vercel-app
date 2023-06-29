@@ -12,8 +12,8 @@ export default function Canvas(props)
     if (fps === undefined)
         fps = 40;
 
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    let width = 0;
+    let height = 0;
 
     const ref = useRef(null);
     
@@ -26,6 +26,8 @@ export default function Canvas(props)
     useEffect(() =>
     {
         const canvas = ref.current;
+        width = window.innerWidth;
+        height = window.innerHeight;
         
         if (fullscreen)
         {
