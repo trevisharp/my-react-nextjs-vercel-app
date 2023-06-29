@@ -2,3 +2,10 @@ body {
     margin: 0;
     overflow: hidden;
 }
+
+.mainText {
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+    width: 90%;
+}

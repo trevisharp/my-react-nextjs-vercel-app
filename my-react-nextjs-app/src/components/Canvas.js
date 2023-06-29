@@ -25,6 +25,8 @@ export default function Canvas(props)
 
     useEffect(() =>
     {
+        setScroll(0);
+        
         const canvas = ref.current;
         width = window.innerWidth;
         height = window.innerHeight;
@@ -54,7 +56,7 @@ export default function Canvas(props)
     };
     const mouseUp = () => setDown(false);
     const mouseDown = () => setDown(true);
-    const mouseScroll = (event) => setScroll(scroll + event.deltaY / 10)
+    const mouseScroll = (event) => setScroll(event.deltaY)
 
     return <div>
         <canvas ref={ref} {...otherProps}
